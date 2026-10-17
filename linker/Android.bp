@@ -69,6 +69,11 @@ cc_object {
 
 // Configuration for the linker binary and any of its static libraries.
 cc_defaults {
+    name: "process_sdk_version_overrides_defaults",
+    cflags: ["-DSDK_VERSION_OVERRIDES=\"/vendor/bin/mm-qcamera-daemon=27\""],
+}
+
+cc_defaults {
     name: "linker_defaults",
     defaults: [
         "process_sdk_version_overrides_defaults",
